@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dockergithub
+spec:
+  selector:
+    app: dockergithub
+  ports:
+    - protocol: TCP
+      port: 8081
+  type: NodePort

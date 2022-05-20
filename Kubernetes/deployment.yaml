@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: dockergithub
+spec:
+  selector:
+    matchLabels:
+      app: dockergithub
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: dockergithub
+    spec: 
+      containers:
+        - name: dockergithub
+          image: lahirusanjeewa2971/dockergithub:v1
+          ports:
+            - containerPort: 8081
